@@ -25,8 +25,8 @@
                 <next>
                   <block type="oled_drawnumber" id="8" inline="true">
                     <value name="NUMBER">
-                      <block type="sensor_object" id="9">
-                        <field name="OBJECT">LEFTFRONT</field>
+                      <block type="sensor_light" id="131">
+                        <field name="LIGHT">LEFT</field>
                       </block>
                     </value>
                     <next>
@@ -47,74 +47,15 @@
                             <next>
                               <block type="oled_drawnumber" id="14" inline="true">
                                 <value name="NUMBER">
-                                  <block type="sensor_object" id="15">
-                                    <field name="OBJECT">RIGHTFRONT</field>
+                                  <block type="sensor_light" id="132">
+                                    <field name="LIGHT">RIGHT</field>
                                   </block>
                                 </value>
                                 <next>
                                   <block type="oled_drawtext" id="16">
                                     <field name="TEXT">     </field>
                                     <next>
-                                      <block type="multimedia_doupdate" id="17">
-                                        <next>
-                                          <block type="movement_leftmotor" id="64" inline="true">
-                                            <value name="MOVLEFT">
-                                              <block type="math_arithmetic" id="82" inline="true">
-                                                <field name="OP">DIVIDE</field>
-                                                <value name="A">
-                                                  <block type="math_arithmetic" id="36" inline="true">
-                                                    <field name="OP">MULTIPLY</field>
-                                                    <value name="A">
-                                                      <block type="sensor_object" id="20">
-                                                        <field name="OBJECT">RIGHTFRONT</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="sensor_object" id="19">
-                                                        <field name="OBJECT">RIGHTFRONT</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="math_number" id="89">
-                                                    <field name="NUM">100</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <next>
-                                              <block type="movement_rightmotor" id="116" inline="true">
-                                                <value name="MOVRIGHT">
-                                                  <block type="math_arithmetic" id="90" inline="true">
-                                                    <field name="OP">DIVIDE</field>
-                                                    <value name="A">
-                                                      <block type="math_arithmetic" id="91" inline="true">
-                                                        <field name="OP">MULTIPLY</field>
-                                                        <value name="A">
-                                                          <block type="sensor_object" id="92">
-                                                            <field name="OBJECT">LEFTFRONT</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="B">
-                                                          <block type="sensor_object" id="93">
-                                                            <field name="OBJECT">LEFTFRONT</field>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="math_number" id="94">
-                                                        <field name="NUM">100</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
-                                      </block>
+                                      <block type="multimedia_doupdate" id="17"></block>
                                     </next>
                                   </block>
                                 </next>
@@ -132,5 +73,61 @@
         </next>
       </block>
     </statement>
+  </block>
+  <block type="movement_leftmotor" id="64" inline="true" x="839" y="419">
+    <value name="MOVLEFT">
+      <block type="math_arithmetic" id="82" inline="true">
+        <field name="OP">DIVIDE</field>
+        <value name="A">
+          <block type="math_arithmetic" id="36" inline="true">
+            <field name="OP">MULTIPLY</field>
+            <value name="A">
+              <block type="sensor_object" id="20">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="sensor_object" id="19">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="89">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="movement_rightmotor" id="116" inline="true">
+        <value name="MOVRIGHT">
+          <block type="math_arithmetic" id="90" inline="true">
+            <field name="OP">DIVIDE</field>
+            <value name="A">
+              <block type="math_arithmetic" id="91" inline="true">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="sensor_object" id="92">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="sensor_object" id="93">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="94">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
   </block>
 </xml>
