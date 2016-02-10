@@ -55,7 +55,26 @@
                                   <block type="oled_drawtext" id="16">
                                     <field name="TEXT">     </field>
                                     <next>
-                                      <block type="multimedia_doupdate" id="17"></block>
+                                      <block type="multimedia_doupdate" id="17">
+                                        <next>
+                                          <block type="movement_leftmotor" id="161" inline="true">
+                                            <value name="MOVLEFT">
+                                              <block type="sensor_light" id="206">
+                                                <field name="LIGHT">LEFT</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="movement_rightmotor" id="172" inline="true">
+                                                <value name="MOVRIGHT">
+                                                  <block type="sensor_light" id="207">
+                                                    <field name="LIGHT">RIGHT</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
                                     </next>
                                   </block>
                                 </next>
